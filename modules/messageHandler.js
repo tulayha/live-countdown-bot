@@ -18,7 +18,7 @@ const { botOwner } = config;
 // messageReply is only populated during a messageUpdate event
 export const messageHandler = async (message, messageReply) => {
   // Check if partial message or if author is a bot
-  if (message.partial || message.author.bot) return;
+  // if (message.partial || message.author.bot) return;
 
   // Check if we're allowed to send messages in the channel
   if (message.guild?.me?.permissionsIn(message.channel.id).has("SEND_MESSAGES") === false) return;
